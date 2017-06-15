@@ -1,0 +1,51 @@
+name: mailgun
+description: Simple Mailgun socket for sending emails
+version: 0.0.1
+keywords:
+  - mailgun
+  - mail
+
+config:
+  MAILGUN_API_KEY:
+    description: Mailgun API key
+    required: true
+  MAILGUN_DOMAIN:
+    description: Mailgun domain for sending e-mail
+    required: true
+
+endpoints:
+  send:
+    description: Send message
+    file: scripts/send.js
+    parameters:
+      to:
+        type: string
+        description: User email
+        example: john.doe@example.com
+      from:
+        type: string
+        description: Who sends the email
+        example: App admin <example@app.com>
+      subject:
+        type: string
+        description: Email subject
+        example: My awesome subject
+      html:
+        type: string
+        description: HTML content of email
+        example: <h1>Email title</h1><p>Hello</p>
+    response:
+      mimetype: application/json
+      examples:
+        -
+          exit_code: 200
+          example: |
+            {
+              "message": "Email was sent."
+            }
+        -
+          exit_code: 400
+          example: |
+            {
+              "message": "Invalid email"
+            }
