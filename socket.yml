@@ -1,10 +1,9 @@
 name: mailgun
 description: Simple Mailgun socket for sending emails
-version: 0.0.1
+version: 0.0.2
 keywords:
   - mailgun
   - mail
-
 config:
   MAILGUN_API_KEY:
     description: Mailgun API key
@@ -12,7 +11,6 @@ config:
   MAILGUN_DOMAIN:
     description: Mailgun domain for sending e-mail
     required: true
-
 endpoints:
   send:
     description: Send message
@@ -37,14 +35,12 @@ endpoints:
     response:
       mimetype: application/json
       examples:
-        -
-          exit_code: 200
+        - exit_code: 200
           example: |
             {
               "message": "Email was sent."
             }
-        -
-          exit_code: 400
+        - exit_code: 400
           example: |
             {
               "message": "Invalid email"
