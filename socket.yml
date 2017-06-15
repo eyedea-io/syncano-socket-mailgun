@@ -1,5 +1,5 @@
 name: mailgun
-description: Simple Mailgun socket for sending emails
+description: Simple Mailgun integration for sending emails
 version: 0.0.1
 keywords:
   - mailgun
