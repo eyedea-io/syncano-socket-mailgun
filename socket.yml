@@ -6,10 +6,10 @@ keywords:
   - mailgun
   - mail
 config:
-  MAILGUN_API_KEY:
+  API_KEY:
     description: Mailgun API key
     required: true
-  MAILGUN_DOMAIN:
+  DOMAIN:
     description: Mailgun domain for sending e-mail
     required: true
 endpoints:

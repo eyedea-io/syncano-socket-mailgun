@@ -4,9 +4,9 @@ import FormData from 'form-data'
 import {response} from 'syncano-server'
 
 
-const {MAILGUN_API_KEY, MAILGUN_DOMAIN} = CONFIG
+const {API_KEY, DOMAIN} = CONFIG
 
-const url = `https://api:${MAILGUN_API_KEY}@api.mailgun.net/v3/${MAILGUN_DOMAIN}/messages`
+const url = `https://api:${API_KEY}@api.mailgun.net/v3/${DOMAIN}/messages`
 const data = new FormData()
 const params = ['from', 'to', 'subject', 'html']
 
