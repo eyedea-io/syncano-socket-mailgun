@@ -14,7 +14,6 @@ config:
 endpoints:
   send:
     description: Send message
-    file: scripts/send.js
     parameters:
       to:
         type: string
@@ -34,14 +33,15 @@ endpoints:
         example: <h1>Email title</h1><p>Hello</p>
     response:
       mimetype: application/json
-      examples:
-        - exit_code: 200
+      success:
+        description: Email sent successfuly
+        parameters:
+            message:
+              type: string
+      fail:
+        description: Error while sending email
+        exit_code: 400
+        parameters:
           example: |
-            {
-              "message": "Email was sent."
-            }
-        - exit_code: 400
-          example: |
-            {
-              "message": "Invalid email"
-            }
+            message:
+              type: string
