@@ -4,6 +4,14 @@ version: 0.0.5
 keywords:
   - mailgun
   - mail
+classes:
+  email_messages:
+    - name: message
+      type: object
+    - name: status
+      type: string
+    - name: plain_message
+      type: text
 config:
   API_KEY:
     description: Mailgun API key
@@ -42,6 +50,20 @@ endpoints:
         description: Error while sending email
         exit_code: 400
         parameters:
-          example: |
-            message:
-              type: string
+          message:
+            type: string
+  webhook:
+    description: Getting info about rceived e-mail from mailgun
+    response:
+      success:
+        description: Success
+      fail:
+        exit_code: 400
+        description: Failed
+events:
+  message-received:
+    description: Emited after receiving a message
+    parameters:
+      id:
+        type: string
+        description: Received message id
