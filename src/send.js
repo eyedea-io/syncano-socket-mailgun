@@ -1,9 +1,9 @@
 import fetch from 'node-fetch'
 import FormData from 'form-data'
-import Syncano from 'syncano-server'
+import Syncano from '@syncano/core'
 
 export default (ctx) => {
-  const {response} = Syncano(ctx)
+  const {response} = new Syncano(ctx)
 
   const url = `https://api:${ctx.config.API_KEY}@api.mailgun.net/v3/${ctx.config.DOMAIN}/messages`
   const data = new FormData()

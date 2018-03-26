@@ -1,8 +1,8 @@
-import Server from 'syncano-server'
+import Syncano from '@syncano/core'
 import getMessageClass from './models/message'
 
 export default async (ctx) => {
-  const {logger, response} = Server(ctx)
+  const {logger, response} = new Syncano(ctx)
   const {info, error} = logger('email')
   const Message = getMessageClass(ctx)
 

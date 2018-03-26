@@ -22,7 +22,7 @@ config:
 endpoints:
   send:
     description: Send message
-    parameters:
+    inputs:
       to:
         type: string
         description: User email
@@ -39,7 +39,7 @@ endpoints:
         type: string
         description: HTML content of email
         example: <h1>Email title</h1><p>Hello</p>
-    response:
+    outputs:
       mimetype: application/json
       success:
         description: Email sent successfuly
@@ -54,7 +54,7 @@ endpoints:
             type: string
   webhook:
     description: Getting info about rceived e-mail from mailgun
-    response:
+    outputs:
       success:
         description: Success
       fail:
@@ -63,7 +63,7 @@ endpoints:
 events:
   message-received:
     description: Emited after receiving a message
-    parameters:
+    inputs:
       id:
         type: string
         description: Received message id

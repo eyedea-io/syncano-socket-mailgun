@@ -1,9 +1,9 @@
 import libmime from 'libmime'
 import axios from 'axios'
-import Server from 'syncano-server'
+import Syncano from '@syncano/core'
 
 export default (ctx) => {
-  const {data, event, logger} = Server(ctx)
+  const {data, event, logger} = new Syncano(ctx)
   const {info} = logger('message')
 
   class Message {
