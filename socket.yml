@@ -1,6 +1,6 @@
 name: mailgun
 description: Simple Mailgun integration for sending emails
-version: 0.0.8
+version: 0.0.9
 keywords:
   - mailgun
   - mail
