@@ -4,7 +4,7 @@ import Syncano from '@syncano/core'
 
 export default (ctx) => {
   const {data, event, logger} = new Syncano(ctx)
-  const {info} = logger('message')
+  const {info} = logger('mailgun:message')
 
   class Message {
     constructor (messagePayload) {

@@ -3,7 +3,7 @@ import getMessageClass from './models/message'
 
 export default async (ctx) => {
   const {logger, response} = new Syncano(ctx)
-  const {info, error} = logger('email')
+  const {info, error} = logger('mailgun:webhook')
   const Message = getMessageClass(ctx)
 
   async function getMessage () {

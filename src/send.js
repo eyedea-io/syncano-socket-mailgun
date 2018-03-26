@@ -3,7 +3,8 @@ import FormData from 'form-data'
 import Syncano from '@syncano/core'
 
 export default (ctx) => {
-  const {response} = new Syncano(ctx)
+  const {logger, response} = new Syncano(ctx)
+  const {info, error} = logger('mailgun:send')
 
   const url = `https://api:${ctx.config.API_KEY}@api.mailgun.net/v3/${ctx.config.DOMAIN}/messages`
   const data = new FormData()
@@ -35,9 +36,11 @@ export default (ctx) => {
     .then(checkStatus)
     .then(parseJSON)
     .then(res => {
+      info('Message was sent.')
       response.json({message: 'Message was sent.'})
     })
     .catch(err => {
+      error(err.message)
       response.json({message: err.message})
     })
 }
