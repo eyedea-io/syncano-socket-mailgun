@@ -20,6 +20,9 @@ describe('send', function () {
         email_messages: {
           create: jest.fn().mockImplementationOnce(() => Promise.resolve({id: 123}))
         }
+      },
+      event: {
+        emit: jest.fn().mockImplementationOnce(() => Promise.resolve())
       }
     })
 

@@ -49,7 +49,11 @@ endpoints:
           message:
             type: string
   webhook:
-    description: Getting info about rceived e-mail from mailgun
+    description: Getting info about received e-mail from mailgun
+    inputs:
+      description: |
+        Mailgun E-mail message payload. For more info check section "Parsed Messages Parameters" of Mailgun docs:
+        https://documentation.mailgun.com/en/latest/user_manual.html#receiving-forwarding-and-storing-messages
     outputs:
       success:
         exit_code: 204

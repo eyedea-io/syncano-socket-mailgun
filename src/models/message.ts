@@ -1,13 +1,13 @@
 import * as S from '@eyedea/syncano'
 import Syncano from '@syncano/core'
-import axios from 'axios'
-import libmime from 'libmime'
+// import axios from 'axios'
+// import libmime from 'libmime'
 
 export default (ctx: S.Context) => {
   const {data, event, logger} = new Syncano(ctx)
   const {info} = logger('mailgun:message')
 
-  const API_KEY = ctx.config.API_KEY
+  // const API_KEY = ctx.config.API_KEY
 
   class Message {
     messagePayload: string
@@ -38,7 +38,7 @@ export default (ctx: S.Context) => {
 
       this.id = msg.id
       info('message saved')
-      event.emit('message-received', this.id)
+      await event.emit('message-received', this.id)
     }
 
     // async getFullMessage () {
