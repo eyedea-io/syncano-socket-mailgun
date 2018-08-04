@@ -1,9 +1,5 @@
 name: mailgun
-description: Simple Mailgun integration for sending emails
-version: 0.0.9
-keywords:
-  - mailgun
-  - mail
+description: Mailgun integration for sending emails
 classes:
   email_messages:
     - name: message
@@ -56,6 +52,7 @@ endpoints:
     description: Getting info about rceived e-mail from mailgun
     outputs:
       success:
+        exit_code: 204
         description: Success
       fail:
         exit_code: 400
