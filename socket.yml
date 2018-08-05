@@ -1,13 +1,11 @@
 name: mailgun
 description: Mailgun integration for sending emails
 classes:
-  email_messages:
-    - name: message
-      type: object
+  EmailMessage:
     - name: status
       type: string
-    - name: plain_message
-      type: text
+    - name: url
+      type: string
 config:
   API_KEY:
     description: Mailgun API key

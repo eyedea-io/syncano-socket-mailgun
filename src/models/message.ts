@@ -32,7 +32,7 @@ export default (ctx: S.Context) => {
     async save () {
       info('save')
       const msg = await data.email_messages.create({
-        messageUrl: this.messagePayload['message-url'],
+        url: this.messagePayload['message-url'],
         status: 'unprocessed',
       })
 
