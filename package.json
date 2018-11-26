@@ -13,7 +13,7 @@
     "mailgun"
   ],
   "peerDependencies": {
-    "@syncano/cli": "0.13.0-alpha.f6ea95d4"
+    "@syncano/cli": "^0.13.0-alpha.f6ea95d4"
   },
   "dependencies": {
     "@eyedea/syncano": "0.2.0",
