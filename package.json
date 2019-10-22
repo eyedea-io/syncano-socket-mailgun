@@ -20,7 +20,7 @@
     "@types/mailgun-js": "^0.16.0",
     "axios": "^0.18.0",
     "libmime": "^4.0.1",
-    "mailgun-js": "^0.20.0"
+    "mailgun-js": "^0.21.0"
   },
   "scripts": {
     "build": "npm run build:src && npm run build:env",
