@@ -1,0 +1,13 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.25.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-HTTPSPROXYAGENT-469131:
+    - mailgun-js > proxy-agent > https-proxy-agent:
+        patched: '2022-10-05T18:20:40.843Z'
+    - mailgun-js > proxy-agent > pac-proxy-agent > https-proxy-agent:
+        patched: '2022-10-05T18:20:40.843Z'
+  SNYK-JS-LODASH-567746:
+    - mailgun-js > async > lodash:
+        patched: '2022-10-05T18:20:40.843Z'
