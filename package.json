@@ -18,7 +18,7 @@
   "dependencies": {
     "@eyedea/syncano": "0.2.0",
     "@types/mailgun-js": "^0.16.0",
-    "axios": "^0.18.0",
+    "axios": "^1.6.0",
     "libmime": "^4.0.1",
     "mailgun-js": "^0.20.0"
   },
